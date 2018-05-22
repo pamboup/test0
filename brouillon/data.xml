@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<div class="tab-content">
+		<div class="tab-pane" id="accueil">
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Au moment de l'accuil de l'enfant.</h4>
+					</center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-calendar" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Date</label>
+							<input required name="dateAccueil" type="date" value="<?= date("Y-m-d")?>" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons" style="font-size:24px">access_time</i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Heure</label>
+							<input name="heureAccueil" type="time" value="{{ date('H:i') }}" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons" style="font-size:24px">format_list_numbered</i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Numéro d’immatriculation </label>
+							<input name="immatricul" type="number" 
+								value="{{ old('immatricul') ?? '10' }}" class="form-control">
+						</div>
+					</div>
+					
+					
+					<div class="form-group has-error" style="padding-left:15px; margin-top:15px">
+						<span>
+							<i class="fa fa-group" style="font-size:16px"></i>
+						</span>
+						<div class="radio" style="display:inline">
+							<label>
+								<input type="radio" checked required name="accompagne" value="oui">
+								Accompagné
+							</label>
+						</div>
+						<br>
+						<span >
+							<i class="fa fa-user" style="font-size:24px"></i>
+						</span>
+						<div class="radio" style="display:inline">
+							<label>
+								<input type="radio" name="accompagne" value="non">
+								Enfant seul
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane" id="identification">
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Identification de l’accompagnateur</h4>
+					</center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Prénom</label>
+							<input requiredpam name="prenomacom" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Nom</label>
+							<input requiredpam name="nomacom" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Age</label>
+							<input name="ageacom" type="number" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-card-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Adresse</label>
+							<input name="adresseacom" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-phone" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Téléphone</label>
+							<input name="telephoneacom" type="number" min="9" max="9" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-briefcase" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Profession</label>
+							<input name="professionacom" type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<br/>
+				<div class="col-sm-12">
+					<center>
+						<h4>Identification de l’enfant</h4>
+					</center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Prénom</label>
+							<input requiredpam name="prenomenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Nom</label>
+							<input requiredpam name="nomenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Surnoms</label>
+							<input name="surnomsenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Age</label>
+							<input name="ageenf" type="number" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-venus-mars" style="font-size:24px"></i>Sexe
+						</span>
+						<div class="radio">
+							<label>
+								<input type="radio" name="sexeenf" value="Masculin">
+								<b>Masculin<i class="fa fa-mars" style="font-size:16px"></i></b>
+							</label><br>
+							<label style="margin-top:10px">
+								<input type="radio" name="sexeenf" value="Féminin">
+								<b>Féminin <i class="fa fa-venus" style="font-size:16px"></i></b>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-calendar" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Date de naissance</label>
+							<input name="datenaisEnf" type="date" value="<?= date("Y-m-d")?>" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-book-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Lieu de naissance</label>
+							<input name="lieunaisEnf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-book-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Ethnie</label>
+							<input name="ethnieenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-book-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Profil</label>
+							<input name="profilenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-street-view" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Rang dans la fratrie</label>
+							<input name="rangFratrieEnf" type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<br/>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-file-text-o"></i>
+							Inscription à l’état civil
+						</span>
+						<div class="radio">
+							<label>
+								<input type="radio" name="inscriEtaCivenf" value="oui">
+								<b>Oui</b>
+							</label><br>
+							<label style="margin-top:10px">
+								<input type="radio" name="inscriEtaCivenf" value="non">
+								<b>Non</b>
+							</label>
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-card-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Adresse actuelle</label>
+							<input name="adresActuenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-card-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Nationalité</label>
+							<input name="nationaliteenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-card-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Pays d’origine</label>
+							<input name="paysOrigenf" type="text" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-card-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Ville/village d’origine</label>
+							<input name="vilVillagOrigenf" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">school</i>
+							Scolarisé
+						</span>
+						<div class="radio">
+							<label>
+								<input type="radio" name="scolariseenf" value="oui"/>
+								<b>Oui</b>
+							</label><br>
+							<label style="margin-top:10px">
+								<input type="radio" name="scolariseenf" value="non"/>
+								<b>Non</b>
+							</label>
+						</div>
+					</div>
+					<div class="input-group" style="margin-bottom:0px;">
+						<span class="input-group-addon">
+							<i class="material-icons">school</i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Niveau de scolarisation</label>
+							<input name="niveauScolarenf" type="text" class="form-control">
+						</div>
+					</div>
+
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="material-icons">school</i>
+							<abbr title="Islamique ou formation professionnelle">
+								Autre enseignement
+							</abbr>
+						</span>
+						<div class="radio" style="margin-bottom:0px;">
+							<label>
+								<input type="radio" name="autrEnseignenf" value="oui"/>
+								<b>Oui</b>
+							</label>
+							<label>
+								<input type="radio" name="autrEnseignenf" value="non"/>
+								<b>Non</b>
+							</label>
+						</div>
+						<div class="form-group" style="margin-top:-4px; padding-left:10px">
+							<input name="autrEnseignNbrAnenf" type="number" class="form-control" placeholder="Nombre d'année">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+				</div>
+				<div class="col-sm-6">
+				</div>
+				<div class="col-sm-6">
+				</div>
+				<div class="col-sm-6">
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane" id="situationFamiliale">
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Situation familiale</h4>
+					</center>
+				</div>
+			</div><center>
+			<div class="row" style="width: 80%; border: 1px solid">
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="pereVivant" value="oui">
+								<b>Père vivant</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mereVivante" value="oui">
+								<b>Mère vivante</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="parenSepare" value="oui">
+								<b>Parents séparés</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="parenVivanEns" value="oui">
+								<b>Parents vivants ensembles</b>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="margin-top:0px;">
+						<div class="radio" style="margin-bottom:-2px;">
+							<label>
+								<input type="radio" checked name="typeorphelin_id" value="0">
+								N'est pas Orphelin
+							</label><br>
+							<label>
+								<input type="radio" name="typeorphelin_id" value="1">
+								Orphelin de père
+							</label><br>
+							<label>
+								<input type="radio" name="typeorphelin_id" value="2">
+								Orphelin de mère
+							</label><br>
+							<label>
+								<input type="radio" name="typeorphelin_id" value="3">
+								Orphelin Total
+							</label>
+						</div>
+					</div>
+					<div class="form-group" style="margin-top:0px; padding-left:10px">
+						<input name="sitFamAutr" type="text" class="form-control" placeholder="Autres (à préciser)">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h5>L’enfant vit avec </h5>
+					</center>
+				</div>
+			</div><center>
+			<div class="row" style="width: 80%; border: 1px solid">
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="vitAvecPere">
+								<b>Père</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="vitAvecMere">
+								<b>Mère</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="vitAvecGrandParent">
+								<b>Grand-parent</b>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="vitAveOncle">
+								<b>Oncle</b>
+							</label>
+						</div>
+						<div class="checkbox" style="margin-bottom:-2px;">
+							<label>
+								<input type="checkbox" name="vitAvecTante">
+								<b>Tante</b>
+							</label>
+						</div>
+					</div>
+					<div class="form-group" style="margin-top:0px; padding-left:10px">
+						<input name="vitAvecAutre" type="text" class="form-control" placeholder="Autres (à préciser)">
+					</div>
+				</div>
+			</div>
+
+
+			<br><br>
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Identification des parents</h4>
+					</center>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Prénom et nom du père</label>
+							<input requiredpam name="pere" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-briefcase" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Occupation du père</label>
+							<input requiredpam name="occupationPere" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Age</label>
+							<input name="agepere" type="number" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-card-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Adresse</label>
+							<input name="adressepere" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-phone" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Téléphone</label>
+							<input name="telephonepere" type="number" min="9" max="9" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<hr>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Prénom et nom du mère</label>
+							<input requiredpam name="mere" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-briefcase" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Occupation du mère</label>
+							<input requiredpam name="occupationmere" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-male" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Age</label>
+							<input name="agemere" type="number" class="form-control">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-address-card-o" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Adresse</label>
+							<input name="adressemere" type="text" class="form-control">
+						</div>
+					</div>
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-phone" style="font-size:24px"></i>
+						</span>
+						<div class="form-group label-floating">
+							<label class="control-label">Téléphone</label>
+							<input name="telephonemere" type="number" min="9" max="9" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tab-pane" id="tbm">
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Type d’urgence ayant motivé la saisine</h4>
+					</center>
+				</div>
+			</div><center>
+			<div class="row" style="width: 90%;">
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg1" value="1">
+								<b>Victime d’exploitation et de pires formes de travail</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg2" value="2">
+								<b>Victime d’abus sexuels</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg3" value="3">
+								<b>Victime de maltraitance</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg4" value="4">
+								<b>Enfant égaré</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg5" value="5">
+								<b>Enfant en fugue</b>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px; padding-bottom:0px">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg8" value="8">
+								<b>Enfant en danger</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg7" value="9">
+								<b>Enfant en situation de vulnérabilité</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="typUrg6" value="6">
+								<b>En conflit avec la loi</b>
+							</label>
+						</div>
+					</div>
+					<div class="form-group" style="margin-top:-5px; padding-left:40px">
+						<input type="text" class="form-control" name="typUrgTypInfr"
+							placeholder="Type d’infraction">
+					</div>
+
+					<div class="form-group" style="margin-top:0px; padding-left:10px">
+						<input type="text" class="form-control" name="typUrgAutr"
+							placeholder="Autres (à préciser)">
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Besoins immédiats</h4>
+					</center>
+				</div>
+			</div><center>
+			<div class="row" style="width: 90%;">
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme1" value="1">
+								<b>Nourriture</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme2" value="2">
+								<b>Premiers soins</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme3" value="3">
+								<b>Médiation familiale</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme4" value="4">
+								<b>Retour en famille</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme5" value="5">
+								<b>Prise en charge psychosocial</b>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme6" value="6">
+								<b>Prise en charge éducative</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme7" value="7">
+								<b>Prise en charge médicale</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme8" value="8">
+								<b>Appui financier</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="besoinImme9" value="9">
+								<b>Placement dans un centre</b>
+							</label>
+						</div>
+						<div class="form-group" style="margin-top:0px;">
+							<input type="text" class="form-control" name="besoinImmeAutr"
+								placeholder="Autres (à préciser)">
+						</div>
+					</div>
+				</div>
+			</div>
+			</center>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Mesures prises</h4>
+					</center>
+				</div>
+			</div><center>
+			<div class="row" style="width: 90%;">
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise1" value="1">
+								<b>Nourriture</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise2" value="2">
+								<b>Premiers soins</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise3" value="3">
+								<b>Médiation familiale</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise4" value="4">
+								<b>Retour en famille</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise5" value="5">
+								<b>Prise en charge psychosocial</b>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group text-left" style="padding-left:10px; margin-top:0px;">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise6" value="6">
+								<b>Prise en charge éducative</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise7" value="7">
+								<b>Prise en charge médicale</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise8" value="8">
+								<b>Appui financier</b>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="mesurPrise9" value="9">
+								<b>Placement dans un centre</b>
+							</label>
+						</div>
+						<div class="form-group" style="margin-top:0px;">
+							<input type="text" class="form-control" name="mesurPriseautr"
+								placeholder="Autres (à préciser)">
+						</div>
+					</div>
+				</div>
+			</div>
+			</center>
+
+			<div class="row">
+				<div class="col-sm-12">
+					<center>
+						<h4>Résumé de la situation de l’enfant (précisant son état à l’accueil)</h4>
+					</center>
+				</div>
+			</div>
+			<div class="row" style="width: 90%;">
+		        <div class="col-sm-12 text-left">
+					<div class="form-group" style="padding-left:10px; margin-top:0px;">
+						<label for="resumeSituationEnfant"><b>Mettre le texte ci-dessous</b></label>
+						<textarea id="resumeSituationEnfant" name="resumeSituationEnfant" class="form-control"rows="4"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

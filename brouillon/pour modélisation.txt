@@ -1,0 +1,27 @@
+//Accueil
+
+//Accompagnateur
+
+//L'enfant
+
+//Situation familiale
+
+//Identification des parents
+
+
+[///prise de soin
+
+//type d'urgence
+
+//Besoins immédiats (plusieurs choix possibles)
+
+//Mesures prises (répercussion du point précédent)
+
+//Résumé de la situation l’enfant (précisant son état à l’accueil) (du text area)
+]
+
+
+////////SUIVI (pour un enfant)
+
+//Notes
+

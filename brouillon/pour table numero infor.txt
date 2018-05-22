@@ -1,0 +1,41 @@
+//orphelin 
+0	N'est pas Orphelin
+1	Orphelin de père
+2	Orphelin de mère
+3	Orphelin Total
+
+//typeUrgence typUrg
+1 	Victime d’exploitation et de pires formes de travail
+2 	Victime d’abus sexuels
+3	Victime de maltraitance
+4	Enfant égaré
+5	Enfant en fugue
+8	Enfant en danger
+7	Enfant en situation de vulnérabilité
+6	En conflit avec la loi ; 
+/*9   Type d’infraction 
+10	Autres (à préciser)*/
+
+//Besoins immédiats (plusieurs choix possibles)
+1	Nourriture 
+2	Premiers soins
+3	Médiation familiale
+4	Retour en famille
+5	Prise en charge psychosocial
+6	Prise en charge éducative
+7	Prise en charge médicale
+8	Appui financier
+9	Placement dans un centre
+/*10	Autres (à préciser) */
+
+//Mesures prises (répercussion du point précédent)
+1	Nourriture 
+2	Premiers soins
+3	Médiation familiale
+4	Retour en famille
+5	Prise en charge psychosocial
+6	Prise en charge éducative
+7	Prise en charge médicale
+8	Appui financier
+9	Placement dans un centre
+/*10	Autres (à préciser) */

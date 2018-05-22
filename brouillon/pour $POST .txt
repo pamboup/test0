@@ -1,0 +1,125 @@
+pour les $_POST
+
+//Accueil
+dateAccueil	required
+heureAccueil	required
+immatricul
+accompagne	required
+
+//accompagnateur
+prenomacom
+nomacom
+ageacom
+adresseacom
+telephoneacom
+professionacom
+
+//l'enfant
+prenomenf
+nomenf
+surnomsenf
+ageenf
+sexeenf
+datenaisEnf
+lieunaisEnf
+ethnieenf
+profilenf
+rangFratrieEnf
+inscriEtaCivenf
+adresActuenf
+nationaliteenf
+paysOrigenf
+vilVillagOrigenf
+scolariseenf
+niveauScolarenf
+autrEnseignenf
+autrEnseignNbrAnenf
+
+//Situation familiale
+pereVivant
+mereVivante
+parenSepare
+parenVivanEns
+typeorphelin_id
+sitFamAutr
+vitAvecPere
+vitAvecMere
+vitAvecGrandParent
+vitAveOncle
+vitAvecTante
+vitAvecAutre
+
+//Identification des parents
+pere
+occupationPere
+agepere
+adressepere
+telephonepere
+mere
+occupationmere
+agemere
+adressemere
+telephonemere
+
+
+
+
+
+//type d'urgence
+typUrg1	Victime d’exploitation et de pires formes de travail
+typUrg2	Victime d’abus sexuels
+typUrg3	Victime de maltraitance
+typUrg4	Enfant égaré
+typUrg5	Enfant en fugue
+typUrg6	En conflit avec la loi ; 
+typUrg8	Enfant en danger
+typUrg7	Enfant en situation de vulnérabilité
+typUrgTypInfr	Type d’infraction 
+typUrgAutr	Autres (à préciser)
+
+//Besoins immédiats (plusieurs choix possibles)
+besoinImme1	Nourriture 
+besoinImme2	Premiers soins
+besoinImme3	Médiation familiale
+besoinImme4	Retour en famille
+besoinImme5	Prise en charge psychosocial
+besoinImme6	Prise en charge éducative
+besoinImme7	Prise en charge médicale
+besoinImme8	Appui financier
+besoinImme9	Placement dans un centre
+besoinImmeAutr	Autres (à préciser) 
+
+//Mesures prises (répercussion du point précédent)
+mesurPrise1	Nourriture 
+mesurPrise2	Premiers soins
+mesurPrise3	Médiation familiale
+mesurPrise4	Retour en famille
+mesurPrise5	Prise en charge psychosocial
+mesurPrise6	Prise en charge éducative
+mesurPrise7	Prise en charge médicale
+mesurPrise8	Appui financier
+mesurPrise9	Placement dans un centre
+mesurPriseautr	Autres (à préciser) 
+
+//Résumé de la situation l’enfant (précisant son état à l’accueil) (du text area)
+resumeSituationEnfant
+
+
+////////SUIVI (pour un enfant)
+suiviDate	Date de la visite                     
+suiviHeure	Heure de la visite
+suiviLieu	Lieu de la visite
+suiviRegion	Région de 
+suiviCommune	Commune de
+suiviPersonResp	Personne responsable
+suiviPersonRenc	Personne rencontrée
+suiviVisiteNum	Visite N°
+
+//Notes
+suiviSituation	SITUATION ACTUELLE DE L’ENFANT
+suiviEvaluPersRenc	EVALUATION DE LA PERSONNE RENCONTREE
+suiviEvaluEnf	EVALUATION DE L’enfant
+
+
+
+
